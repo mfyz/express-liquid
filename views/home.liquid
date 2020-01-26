@@ -1,0 +1,15 @@
+{% layout "layouts/default" %}
+
+<h2>Home</h2>
+
+{{message}}
+
+<hr>
+
+There are {{ users | size }} users
+
+<ul>
+	{% for user in users -%}
+	<li>{{ user.name }} is {{ user.age }} years old</li>
+	{% endfor -%}
+</ul>
